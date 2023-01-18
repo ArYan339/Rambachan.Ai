@@ -4,7 +4,6 @@ import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
- 
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -18,7 +17,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Hello from CodeY!'
+    message: 'Hello from CodeX!'
   })
 })
 
@@ -46,4 +45,4 @@ app.post('/', async (req, res) => {
   }
 })
 
-app.listen(5001, () => console.log('AI server started on http://localhost:50000'))
+app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
